@@ -1,0 +1,1574 @@
+/* Kat Garcia 2014 */
+
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  height: 100%;
+}
+
+body {
+  background: #E2E4E7;
+  padding: 0;
+  position: relative;
+  margin: 0;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrapper {
+  height: 100% !important;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Fonts */
+
+@font-face {
+    font-family: 'museo300';
+    src: url('../fonts/Museo300-Regular-webfont.eot');
+    src: url('../fonts/Museo300-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Museo300-Regular-webfont.woff2') format('woff2'),
+         url('../fonts/Museo300-Regular-webfont.woff') format('woff'),
+         url('../fonts/Museo300-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Museo300-Regular-webfont.svg#museo300') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo_sans500';
+    src: url('../fonts/MuseoSans_500-webfont.eot');
+    src: url('../fonts/MuseoSans_500-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/MuseoSans_500-webfont.woff2') format('woff2'),
+         url('../fonts/MuseoSans_500-webfont.woff') format('woff'),
+         url('../fonts/MuseoSans_500-webfont.ttf') format('truetype'),
+         url('../fonts/MuseoSans_500-webfont.svg#museo_sans500') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo_sans500_italic';
+    src: url('../fonts/MuseoSans_500_Italic-webfont.eot');
+    src: url('../fonts/MuseoSans_500_Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/MuseoSans_500_Italic-webfont.woff2') format('woff2'),
+         url('../fonts/MuseoSans_500_Italic-webfont.woff') format('woff'),
+         url('../fonts/MuseoSans_500_Italic-webfont.ttf') format('truetype'),
+         url('../fonts/MuseoSans_500_Italic-webfont.svg#museo_sans500_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+a {
+  text-decoration: none;
+  color:#393839;
+}
+
+a:hover {
+  color:#5F5F5F;
+}
+
+.main {
+  float: left;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*
+header {
+  position: relative;
+  z-index: 10;
+}*/
+
+.main section .page_container {
+  position: relative;
+  top: 16%;
+  margin: 0 auto 0;
+  max-width: 950px;
+  z-index: 3;
+}
+
+.main section  {
+  overflow: hidden;
+}
+
+.main section > img {
+  position: absolute;
+  max-width: 100%;
+  z-index: 1;
+}
+
+.main section#section-intro h1 {
+  float: none;
+  max-width: 435px;
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin-bottom: 15px;
+  font-size: 44px;
+  color: black;
+}  
+
+.main section#section-intro h2 {
+  font-size: 18px;
+  display: block;
+  color: rgba(0,0,0,0.85);
+  text-align: center;
+  max-width: 435px;
+  width: 100%;
+  line-height: 160%;
+}
+
+.main section#section-beatlesarrive > img {
+  position: absolute;
+  top: -300px;
+  left: 50%;
+  margin-left: -1095px;
+}
+
+    .main section#section-beatlesarrive .page_container {
+      margin-top: 240px;
+      overflow: hidden;
+    }
+    .main section#section-beatlesarrive h1 {
+      text-align: center;
+      padding: 0;
+      margin-bottom: 15px;
+      font-size: 50px;
+      letter-spacing: -1px;
+      color: white;
+    }
+    .main section#section-beatlesarrive h2 {
+      color: rgba(255,255,255,0.85);
+      text-align: center;
+      line-height: 160%;
+      font-weight: 100;
+    }
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+  position:relative;
+  font-family:'museo_sans500';
+}
+
+html, body {
+    font-size:10px;
+    /*font-size: 1em;*/
+    line-height: 1.4em;
+}
+h1 {
+    font-size:6.6em;
+    font-family:'museo300';
+}
+h1 span {
+    font-size:0.3em;
+}
+h2 {
+    font-size:4.0em;
+    font-family:'museo300';
+}
+h3 {
+    font-size:3.0em;
+    font-family:'museo300';
+}
+h4 {
+  font-size:2.0em;
+  font-family:'museo300';
+}
+p.lead {
+    font-size:2.2em;
+    line-height:1.3;
+}
+p {
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+/* ==========================================================================
+   Helper Classes
+   ========================================================================== */
+
+.popout-blurb {
+  color:white;
+  margin-top:5em;
+  margin-left:12rem;
+}
+
+.popout-blurb h1 {
+  color:white;
+}
+.panel-target {
+    background-color: rgba(255,255,255,0.8);
+    padding: 3em;
+    border:1px solid #e5e5e5;
+    width: 10em;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.leftpad {
+  margin-left:12rem;
+}
+
+.panel.main-content, .panel.main-content h1, .panel.main-content p {
+  color:white;
+}
+
+
+/* ==========================================================================
+   Foundation Overrides
+   ========================================================================== */
+
+.panel {
+  border:0;
+}
+
+.row {
+  max-width:100%;
+}
+
+@media only screen and (min-width: 64.063em) {
+.columns, .column {
+  padding-left:0;
+  padding-right:0;
+}
+}
+
+.panel {
+  margin-right:0;
+  margin-left:0;
+  padding:3em;
+}
+
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+
+.story-sidenav {
+  width:10em;
+  display:none;
+  background: rgba(142,22,19,0.8);
+}
+
+.accordion .accordion-navigation > a, .accordion dd > a {
+  display:none;
+}
+
+.subnav li {
+  margin-top:0;
+  text-align:center;
+  color:white;
+}
+
+.subnav {
+  text-align:center;
+}
+
+.nav-category {
+  font-size: 1.5em;
+  margin: 0 auto;
+  line-height: 1.3em;
+}
+
+*, *:before, *:after { 
+    box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+} 
+
+.nav-node {
+  position: relative; 
+  height: 12px; 
+  width: 12px; 
+  background-color: white; 
+  -webkit-transform: rotate(45deg); 
+  transform: rotate(45deg);
+  margin:0 auto;
+  margin-top:2em;
+  display:block;
+}
+
+.nav-active {
+  height:24px;
+  width:24px;
+}
+
+
+.tabs.vertical dd {
+  width:95px;
+}
+
+.accordion .accordion-navigation > .content.active, .accordion dd > .content.active {
+  background:transparent;
+  padding:0;
+}
+
+.subnav li.beatlemania-thumbnail {
+  margin-top:0;
+}
+
+/*
+.nav-node:active {
+  border: 18px solid transparent;
+  top: -18px;
+}
+.nav-node:after:active {
+  left: -18px;
+  top: 18px;
+  border: 18px solid transparent;
+}
+*/
+
+
+.nav-category, .nav-category p {
+  font-weight:500;
+  font-size:1.4em;
+  text-align:center;
+  background-color:#8E1613;
+  padding: 1.2em 0.5em;
+  line-height:1.2em;
+  color:white;
+}
+
+.nav-category.active {
+  background-color:#fff;
+}
+
+.nav-category.active a {
+  color:#696A6D;
+}
+
+.nav-category a {
+  color:#fff;
+}
+
+.sub-nav li:active .nav-node {}
+
+[data-magellan-expedition], [data-magellan-expedition-clone] {
+  min-width:0;
+}
+
+.tabs.vertical {
+  width:95px;
+  height:100%;
+  padding:0;
+}
+
+.top-link {
+  height: 100%;
+  color:white;
+  font-size:25px;
+  margin:0 auto;
+  display:block;
+  text-align:center;
+  border-top: 1px solid #ababab;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 15px 10px;
+  border-color: transparent transparent white transparent;
+  padding: 10px 0 10px 0;
+  margin-bottom: 25px;
+}
+
+.content li:last-child a {
+  margin-bottom:2em;
+}
+
+
+/* Tooltips */
+
+.tooltip{
+  font-size:13px;
+  text-transform:uppercase;
+  font-family:'museo_sans500';
+  background-color:rgba(255,255,255,0.8);
+  color:#696A6D;
+  padding:0.8em;
+  right:12px;
+}
+
+.tooltip > .nub {
+  border-color:transparent rgba(255,255,255,0.8) transparent transparent !important;
+    pointer-events: none;
+}
+
+/* ==========================================================================
+   Music Player
+   ========================================================================== */
+
+#music {
+  position:fixed;
+  width:37.86em;
+  height:auto;
+  padding:1.5em 2em;
+  z-index:5000;
+  top:0;
+  right:0;
+  display:none;
+  background:rgba(255,255,255,0.8);
+}
+
+.fi-volume, .fi-volume-strike, .fi-video, .fi-play, .fi-pause {
+  color:#393839;
+  float:left;
+  font-size:31px;
+  margin-right: 0.5em;
+}
+
+.fi-video, .fi-play, .fi-pause {
+  color:white;
+}
+
+.panel-target .fi-video, .panel-target .fi-play, .panel-target .fi-pause {
+  color:#393839;
+}
+
+#section-intro .fi-volume, #section-intro .fi-volume-strike {
+  color:white;
+}
+
+.panel-target .fi-video:hover, .panel-target .fi-play:hover, .panel-target .fi-pause:hover {
+  color:#5F5F5F;
+}
+
+.fi-volume:hover, .fi-volume-strike:hover, .fi-video:hover, .fi-play:hover, .fi-pause:hover {
+  cursor:pointer;
+}
+
+.song {
+  font-size:14px;
+  color:white;
+}
+
+.panel-target .song {
+  color:#393839;
+}
+
+#music .song {
+  color:#393839;
+}
+
+.song p, .member-popup .song p {
+  margin-top:0.05em;
+}
+
+.title {
+  font-style:italic;
+  font-weight:bold;
+  font-size:17px;
+}
+
+.title.single {
+  margin-top:25px;
+}
+
+.song-name {
+  float: left;
+  width: 70%;
+  vertical-align: bottom;
+}
+
+hr.song-divider {
+  border-top:1px solid white;
+  margin:20px 0;
+}
+
+.music-content .artist {
+  color:white;
+}
+
+.music-content {
+  padding:2em;
+  height:7em;
+}
+
+.artist {
+  font-weight:100;
+}
+
+.holder{
+  position: absolute;
+  left: 76%;
+  top: 20%;
+  color:#ccc;
+}
+
+.holder span{
+  margin-left: -5px;
+  font: 500 14px 'verdana';
+}
+.clr{
+  clear: both;
+}
+.bar{
+  width: 2px;
+  height: 40px;
+  background: #393839;
+  margin: 2px;
+  float: left;
+  animation: sound 0ms -800ms linear infinite alternate;
+}
+
+@keyframes sound {
+    0% {
+       opacity: .35;
+        height: 3px; 
+    }
+    100% {
+        opacity: 1;       
+        height: 28px;        
+    }
+}
+
+.bar:nth-child(1)  { left: 1px; animation-duration: 474ms; }
+.bar:nth-child(2)  { left: 5px; animation-duration: 433ms; }
+.bar:nth-child(3)  { left: 9px; animation-duration: 407ms; }
+.bar:nth-child(4)  { left: 13px; animation-duration: 458ms; }
+.bar:nth-child(5)  { left: 17px; animation-duration: 400ms; }
+.bar:nth-child(6)  { left: 21px; animation-duration: 427ms; }
+.bar:nth-child(7)  { left: 25px; animation-duration: 441ms; }
+.bar:nth-child(8)  { left: 29px; animation-duration: 419ms; }
+.bar:nth-child(9)  { left: 33px; animation-duration: 487ms; }
+.bar:nth-child(10) { left: 37px; animation-duration: 442ms; }
+
+
+.off {
+  -moz-animation-name: none;
+  -webkit-animation-name: none;
+  -ms-animation-name: none;
+  animation-name: none;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  height:5px;
+}
+
+
+
+/* ==========================================================================
+   Section Backgrounds
+   ========================================================================== */
+
+   /* Backgrounds will cover all the section
+  * --------------------------------------- */
+  #section-intro,
+  #beatlesArrive,
+  #beatlesMembers,
+  #beatlesMembers-bw,
+  .harddaysnight,
+  .rubbersoul,
+  .sgtpepper,
+  .letitbe,
+  .yardbirds,
+  .theanimals,
+  .thezombies,
+  .hermanshermits,
+  .petergordon,
+  #rollingStones,
+  #beatlesVsstones,
+  #takeoverMod,
+  #secondWave,
+  #theKinks,
+  #whoMembers,
+  #influenceOn,
+  #nextInvasion {
+    background-size: cover;
+  }
+
+  /* ==========================================================================
+   Section Styles
+   ========================================================================== */
+
+  /****** Introduction ******/
+
+  /* British Flag */
+.uk-flag {
+ background: url('http://upload.wikimedia.org/wikipedia/commons/5/52/United_Kingdom_Flag_Background.svg');
+ width:100%;
+ height:100%;
+ position:absolute;
+ background-size:cover;
+ display:none;
+ z-index:20;
+}
+
+#SheaStadium{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-size: 100% 100%;
+    background-color: black; /* in case the video doesn't fit the whole page*/
+      background-image: /* our video */;
+      background-position: center center;
+      background-size: contain;
+  }
+
+  .mutevid {
+    position:fixed;
+    right:1.2em;
+    top:1.2em;
+    z-index:4000;
+  }
+
+.intro-text h1 {
+  color:white;
+  position:absolute;
+  top:43vh;
+  margin-left:1.5em;
+  z-index:30;
+  -webkit-animation-duration: 3s;
+}
+
+.intro-text {
+  
+}
+
+.no-left {
+  left:auto;
+}
+
+.hidden {
+  visibility:hidden;
+}
+
+.scroll-arrow {
+  width: 0; 
+  height: 0; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid white;
+  margin:0 auto;
+  top:90vh;
+  left:74em;
+  position:absolute;
+  z-index:30;
+  -webkit-animation-iteration-count: infinite;  
+}
+
+  /* Layer with position absolute in order to have it over the video
+  * --------------------------------------- */
+  #section-intro .layer{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    left: 0;
+    top: 43%;
+    height: 100%;
+  }
+
+/* Defining each section background and styles
+* --------------------------------------- */
+  #section-intro{
+    background:url("../img/beatlesfans2.jpg");
+  }
+
+  /****** The Beatles Arrive ******/
+
+  #beatlesArrive{
+    background:url("../img/beatles1963.jpg") no-repeat center center fixed;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -ms-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    padding: 10% 0 0 0;
+  }
+
+  /****** Beatles Albums / First Wave Bands ******/
+
+.harddaysnight {
+  background:url("../img/aharddaysnight.jpg") no-repeat;
+}
+
+.rubbersoul {
+  background:url('../img/rubbersoul.jpg') no-repeat;
+}
+
+.sgtpepper {
+  background:url('../img/sgtpepper.jpg') no-repeat;
+}
+
+.letitbe {
+  background:url('../img/letitbe.jpg') no-repeat;
+}
+
+.yardbirds {
+  background:url('../img/yardbirds.jpg') no-repeat;
+}
+
+.theanimals {
+  background:url('../img/theanimals.jpg') no-repeat;
+}
+.thezombies {
+  background:url('../img/zombies.jpg') no-repeat;
+}
+
+.hermanshermits {
+  background:url('../img/hermanshermits.jpg') no-repeat;
+}
+
+.petergordon {
+  background:url('../img/peterandgordon.jpeg') no-repeat;
+} 
+
+.hollies {
+  background:url('../img/hollies.jpg') no-repeat;
+}
+
+.cream {
+  background:url('../img/cream.jpg') no-repeat;
+}
+
+.ledzeppelin {
+  background:url('../img/ledzeppelin.jpg') no-repeat;
+}
+
+.pinkfloyd {
+  background:url('../img/pinkfloyd.jpg') no-repeat;
+}
+
+.smiths {
+  background:url('../img/smiths.jpg') no-repeat;
+}
+
+.clash {
+  background:url('../img/clash.jpg') no-repeat;
+}
+
+.arcticmonkeys {
+  background:url('../img/arcticmonkeys.jpg') no-repeat;
+}
+
+.radiohead {
+  background:url('../img/radiohead.jpg') no-repeat;
+}
+
+  .harddaysnight,
+  .rubbersoul,
+  .sgtpepper,
+  .letitbe,
+  .yardbirds,
+  .theanimals,
+  .thezombies,
+  .hermanshermits,
+  .petergordon,
+  .hollies,
+  .cream,
+  .ledzeppelin,
+  .pinkfloyd,
+  .smiths,
+  .clash,
+  .arcticmonkeys,
+  .radiohead {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */    
+   -webkit-filter: grayscale(100%);
+   -moz-filter: grayscale(100%);
+   -ms-filter: grayscale(100%);
+   filter: grayscale(100%);
+   filter: gray; /* IE 6-9 */
+   -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -ms-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: cover;
+  height:50vh;
+  width:100%;
+  z-index:1;
+  overflow:hidden;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  }
+
+  .harddaysnight:hover,
+  .rubbersoul:hover,
+  .sgtpepper:hover,
+  .letitbe:hover,
+  .yardbirds:hover,
+  .theanimals:hover,
+  .thezombies:hover,
+  .hermanshermits:hover,
+  .petergordon:hover,
+  .hollies:hover,
+  .cream:hover,
+  .ledzeppelin:hover,
+  .pinkfloyd:hover,
+  .smiths:hover,
+  .clash:hover,
+  .arcticmonkeys:hover,
+  .radiohead:hover,
+  .fullcolor {
+   -webkit-filter: none;
+   -moz-filter: none;
+   -ms-filter: none;
+   filter: none;
+  }
+
+#beatlesAlbums {
+  background:#A6C927;
+}
+
+#firstwaveBands {
+  background:rgba(198,105,20,1);
+}
+
+#secondwaveBands {
+  background:rgba(74, 166, 171, 0.9);
+}
+
+#nextinvasionBands {
+  background:rgba(198,105,20,0.8);
+}
+
+#beatlesAlbums .row .columns, #firstwaveBands .row .columns, #secondwaveBands .row .columns, #nextinvasionBands .row .columns {
+  padding-bottom:.5em;
+  padding-left:.25em;
+  padding-right:.25em;
+}
+
+.hoverpanel{
+  margin-top:6em;
+  -webkit-transition: all 3s ease-in-out, all 0.5s ease-out;
+  -moz-transition: all 3s ease-in, all 0.5s ease-out;
+  -o-transition: all 3s ease-in, all 0.5s ease-out;
+  transition: all 3s ease-in, all 0.5s ease-out;
+  background:rgba(198,105,20,0.8);
+}
+
+.hoverpanel-right {
+  right:-50em;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.hoverpanel-left {
+  left:-50em;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.hoverpanel.open {
+  display:block;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.hoverpanel-right.open {
+  right:-1em;
+}
+
+.hoverpanel-left.open {
+  left:0;
+}
+
+#secondwaveBands .hoverpanel {
+  background:rgba(74, 166, 171, 0.9);
+}
+
+#nextinvasionBands .hoverpanel {
+  background:rgba(198,105,20,0.8);
+}
+
+
+
+.hoverpanel h3, .hoverpanel p {
+  color:white;
+}
+
+.bandpanel {
+  cursor:pointer;
+}
+
+.yardbirds .panel {
+  display:block;
+}
+
+/*
+.harddaysnight:hover .panel,
+.rubbersoul:hover .panel,
+.sgtpepper:hover .panel,
+.letitbe:hover .panel,
+.yardbirds:hover .panel,
+.theanimals:hover .panel,
+.hermanshermits:hover .panel,
+.daveclarkfive:hover .panel
+*/
+.hoverpanel {
+  opacity:1;
+  padding:2.5em 2em !important;
+}
+
+
+
+  /****** Beatles Members / The Who Members ******/
+
+  #beatlesMembers{
+  background:
+  url("../img/beatles-profiles-bw.jpg");
+  background-size: 1400px 900px;
+  background-position:auto;
+  z-index:3;
+  position:relative;
+  overflow:hidden;
+  width:100%;
+  height:800px;
+}
+
+#whoMembers {
+  background:url('../img/thewho-bw.jpg');
+  background-size: 1500px 844px;
+  background-position:auto;
+  z-index:3;
+  position:relative;
+  overflow:hidden;
+  width:100%;
+  height:800px;
+}
+
+.mask-container {
+  position:relative;
+}
+
+.members-mask {
+  background:url("../img/beatles-profiles.jpg");
+  background-size: 1400px 900px;
+  background-position:auto;
+  /*
+  -webkit-mask-image: url('../img/john-mask2.png');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size:auto;
+  -webkit-mask-position: 140px 50px;
+  position:absolute;
+  height:auto;
+  */
+}
+
+.member-triangle, .members-ringo:before {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 26.3px 15px 0 15px;
+  border-color: white transparent transparent transparent;
+  position:absolute;
+  z-index:6000;
+
+}
+
+.who-members-mask {
+  background:url('../img/thewho.jpg');
+  background-size: 1500px 844px;
+  background-position:auto;
+}
+
+.members-john {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */    
+   -webkit-filter: grayscale(100%);
+   -moz-filter: grayscale(100%);
+   -ms-filter: grayscale(100%);
+   filter: grayscale(100%);
+   filter: gray; /* IE 6-9 */
+-webkit-clip-path: polygon(378px 88px,370px 102px,370px 110px,371px 117px,368px 121px,370px 126px,367px 137px,370px 153px,372px 167px,377px 174px,372px 181px,358px 195px,337px 201px,292px 219px,274px 299px,257px 396px,246px 403px,222px 417px,203px 434px,186px 493px,180px 493px,173px 500px,167px 501px,166px 507px,168px 534px,168px 556px,174px 569px,184px 578px,200px 581px,218px 570px,228px 571px,228px 562px,225px 553px,240px 528px,248px 509px,252px 493px,258px 493px,252px 508px,233px 600px,253px 620px,248px 686px,289px 677px,301px 670px,304px 660px,312px 650px,329px 621px,342px 728px,345px 766px,344px 790px,364px 790px,366px 801px,362px 816px,352px 831px,348px 838px,352px 849px,374px 848px,395px 846px,392px 838px,400px 832px,402px 818px,398px 799px,394px 796px,394px 790px,397px 787px,393px 753px,396px 732px,394px 697px,391px 666px,388px 655px,391px 644px,388px 631px,390px 615px,389px 566px,392px 544px,390px 534px,393px 522px,398px 550px,399px 566px,398px 574px,402px 583px,399px 589px,402px 609px,406px 618px,406px 632px,403px 638px,402px 676px,405px 688px,402px 703px,404px 726px,399px 738px,396px 755px,405px 772px,404px 812px,413px 826px,425px 834px,438px 832px,446px 809px,446px 796px,432px 745px,454px 739px,444px 692px,452px 670px,461px 625px,457px 619px,461px 611px,463px 597px,465px 580px,465px 520px,477px 517px,485px 502px,490px 484px,495px 470px,499px 376px,501px 300px,496px 236px,494px 224px,477px 213px,446px 200px,435px 195px,428px 183px,430px 172px,446px 163px,452px 145px,454px 136px,460px 114px,455px 96px,448px 88px,433px 78px,402px 74px,390px 79px);
+  height:100vh;
+  position:absolute;
+  width:100%;
+}
+
+
+.members-ringo {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */    
+   -webkit-filter: grayscale(100%);
+   -moz-filter: grayscale(100%);
+   -ms-filter: grayscale(100%);
+   filter: grayscale(100%);
+   filter: gray; /* IE 6-9 */
+  -webkit-clip-path: polygon(589px 120px,598px 122px,610px 127px,619px 140px,622px 147px,626px 167px,628px 169px,630px 174px,627px 186px,624px 191px,620px 189px,619px 191px,621px 197px,624px 198px,637px 205px,658px 218px,677px 228px,676px 231px,673px 252px,671px 280px,667px 302px,666px 320px,664px 328px,665px 342px,670px 350px,675px 360px,682px 369px,701px 377px,703px 389px,700px 401px,700px 406px,704px 413px,702px 420px,704px 429px,702px 434px,703px 472px,717px 472px,721px 482px,719px 486px,718px 498px,728px 519px,734px 554px,729px 556px,730px 561px,721px 564px,723px 567px,722px 570px,711px 573px,708px 569px,697px 569px,694px 587px,685px 611px,683px 632px,674px 641px,677px 645px,677px 653px,668px 679px,665px 691px,660px 701px,659px 713px,651px 757px,646px 759px,650px 793px,646px 797px,648px 805px,640px 820px,642px 833px,645px 837px,645px 847px,643px 856px,633px 859px,617px 858px,601px 855px,597px 847px,599px 833px,598px 825px,605px 814px,599px 800px,597px 772px,593px 756px,587px 715px,583px 688px,586px 648px,584px 643px,584px 623px,577px 609px,581px 599px,577px 591px,520px 584px,513px 583px,518px 545px,516px 533px,520px 524px,521px 511px,519px 507px,523px 484px,527px 476px,516px 469px,514px 462px,503px 445px,503px 428px,497px 418px,493px 411px,495px 379px,501px 376px,502px 363px,498px 356px,496px 334px,498px 309px,503px 296px,530px 254px,551px 233px,572px 210px,570px 200px,566px 201px,559px 199px,552px 189px,553px 180px,548px 164px,554px 145px,557px 138px,564px 133px,576px 122px);
+  height:100vh;
+  position:absolute;
+  width:100%;
+}
+
+.members-paul {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */    
+   -webkit-filter: grayscale(100%);
+   -moz-filter: grayscale(100%);
+   -ms-filter: grayscale(100%);
+   filter: grayscale(100%);
+   filter: gray; /* IE 6-9 */
+  -webkit-clip-path: polygon(768px 62px,783px 57px,787px 61px,796px 63px,798px 69px,812px 79px,815px 103px,819px 109px,818px 120px,816px 127px,817px 135px,810px 147px,811px 161px,820px 165px,824px 173px,852px 183px,872px 190px,889px 199px,897px 212px,895px 218px,889px 231px,884px 251px,879px 265px,878px 287px,880px 306px,886px 321px,884px 325px,882px 339px,880px 350px,882px 367px,885px 378px,904px 419px,911px 427px,905px 443px,901px 455px,900px 466px,892px 487px,873px 497px,870px 495px,867px 497px,870px 541px,868px 575px,865px 593px,856px 619px,858px 621px,857px 627px,848px 637px,853px 643px,849px 647px,847px 660px,837px 686px,827px 699px,828px 705px,828px 715px,824px 729px,827px 743px,833px 803px,822px 805px,822px 813px,828px 826px,828px 834px,830px 840px,832px 849px,828px 857px,810px 858px,787px 856px,781px 849px,786px 835px,788px 826px,782px 822px,774px 815px,764px 792px,772px 761px,764px 725px,761px 703px,761px 689px,759px 681px,757px 666px,755px 655px,750px 635px,749px 622px,743px 605px,734px 563px,730px 545px,728px 527px,723px 491px,718px 470px,703px 470px,700px 445px,702px 430px,700px 423px,703px 417px,698px 405px,702px 391px,699px 380px,688px 373px,674px 363px,665px 351px,662px 337px,664px 326px,666px 310px,670px 277px,672px 249px,678px 225px,682px 211px,701px 198px,742px 183px,750px 177px,755px 173px,762px 167px,761px 161px,752px 143px,746px 143px,740px 137px,738px 125px,733px 119px,729px 103px,732px 97px,733px 83px,738px 77px,748px 69px,762px 60px);
+  height:100vh;
+  position:absolute;
+  width:100%;
+}
+
+.members-george {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */    
+   -webkit-filter: grayscale(100%);
+   -moz-filter: grayscale(100%);
+   -ms-filter: grayscale(100%);
+   filter: grayscale(100%);
+   filter: gray; /* IE 6-9 */
+-webkit-clip-path: polygon(1010px 22px,989px 27px,976px 37px,968px 57px,963px 77px,966px 91px,966px 99px,967px 107px,973px 114px,980px 113px,984px 121px,980px 123px,968px 138px,959px 165px,939px 176px,911px 191px,901px 202px,889px 226px,878px 276px,881px 320px,877px 345px,883px 371px,896px 401px,909px 424px,892px 486px,874px 552px,905px 559px,926px 564px,932px 559px,954px 558px,966px 554px,973px 588px,980px 649px,984px 705px,996px 758px,990px 780px,994px 787px,993px 802px,992px 812px,999px 831px,1012px 844px,1034px 848px,1037px 857px,1061px 855px,1067px 832px,1074px 830px,1075px 812px,1064px 799px,1062px 786px,1054px 739px,1057px 701px,1066px 657px,1075px 630px,1090px 548px,1089px 542px,1093px 548px,1107px 542px,1129px 539px,1163px 536px,1135px 442px,1148px 415px,1163px 372px,1161px 299px,1155px 244px,1139px 198px,1120px 180px,1085px 162px,1073px 142px,1043px 120px,1055px 105px,1059px 85px,1061px 69px,1044px 34px,1026px 26px);
+  height:100vh;
+  position:absolute;
+  width:100%;
+}
+
+.members-roger {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */    
+   -webkit-filter: grayscale(100%);
+   -moz-filter: grayscale(100%);
+   -ms-filter: grayscale(100%);
+   filter: grayscale(100%);
+   filter: gray; /* IE 6-9 */
+  /*Chrome,Safari*/
+  -webkit-clip-path: polygon(294px 129px,288px 129px,273px 129px,258px 135px,244px 143px,235px 154px,227px 177px,222px 197px,223px 216px,231px 241px,238px 261px,227px 261px,215px 258px,202px 265px,190px 270px,185px 264px,170px 263px,146px 267px,134px 259px,125px 256px,108px 254px,94px 257px,78px 265px,67px 276px,62px 289px,64px 293px,74px 293px,86px 294px,104px 300px,117px 300px,131px 305px,144px 309px,152px 316px,162px 318px,172px 319px,176px 326px,173px 325px,167px 328px,165px 332px,167px 337px,188px 344px,196px 346px,207px 358px,212px 366px,221px 374px,237px 383px,249px 386px,256px 393px,259px 402px,268px 412px,275px 421px,296px 430px,321px 444px,338px 452px,341px 431px,346px 418px,360px 406px,375px 395px,377px 385px,386px 374px,385px 359px,390px 350px,401px 337px,404px 318px,413px 302px,422px 290px,438px 278px,428px 268px,404px 260px,374px 252px,363px 248px,365px 229px,359px 219px,353px 192px,347px 173px,332px 150px,317px 134px,300px 129px,284px 129px);
+  height:100vh;
+  position:absolute;
+  width:100%;
+}
+
+.members-johne {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */    
+   -webkit-filter: grayscale(100%);
+   -moz-filter: grayscale(100%);
+   -ms-filter: grayscale(100%);
+   filter: grayscale(100%);
+   filter: gray; /* IE 6-9 */
+  -webkit-clip-path: polygon(538px 154px,523px 159px,506px 177px,497px 195px,495px 220px,492px 231px,490px 241px,468px 264px,440px 277px,421px 288px,411px 311px,401px 326px,402px 343px,388px 353px,388px 373px,379px 388px,364px 400px,347px 423px,340px 453px,345px 477px,353px 501px,348px 511px,351px 526px,356px 527px,363px 525px,363px 513px,366px 514px,368px 519px,365px 533px,367px 535px,385px 540px,400px 543px,407px 541px,407px 534px,411px 524px,425px 519px,438px 521px,443px 526px,440px 531px,445px 534px,449px 539px,459px 545px,469px 544px,468px 537px,483px 533px,490px 533px,504px 534px,515px 531px,526px 540px,534px 542px,546px 545px,574px 547px,611px 548px,645px 552px,633px 530px,634px 515px,640px 479px,646px 466px,651px 453px,657px 437px,656px 424px,656px 410px,663px 385px,671px 364px,671px 347px,672px 337px,682px 324px,712px 310px,701px 295px,702px 281px,705px 259px,710px 241px,707px 233px,696px 222px,689px 213px,679px 204px,672px 204px,655px 198px,642px 199px,632px 194px,628px 188px,613px 167px,604px 159px,590px 156px,578px 154px,567px 152px,557px 153px);
+  height:100vh;
+  position:absolute;
+  width:100%;
+}
+
+.members-keith {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */    
+   -webkit-filter: grayscale(100%);
+   -moz-filter: grayscale(100%);
+   -ms-filter: grayscale(100%);
+   filter: grayscale(100%);
+   filter: gray; /* IE 6-9 */
+  -webkit-clip-path: polygon(728px 219px,714px 232px,705px 260px,703px 282px,704px 296px,711px 312px,703px 316px,677px 331px,673px 343px,672px 354px,672px 367px,664px 380px,660px 384px,656px 426px,659px 440px,648px 456px,647px 474px,638px 489px,637px 499px,635px 514px,635px 529px,642px 553px,653px 556px,668px 557px,676px 554px,679px 557px,690px 565px,699px 566px,702px 562px,705px 566px,713px 567px,717px 564px,729px 570px,736px 570px,741px 567px,738px 562px,746px 555px,751px 559px,758px 562px,758px 566px,760px 568px,773px 572px,798px 569px,801px 572px,818px 571px,828px 572px,837px 573px,841px 575px,853px 577px,942px 586px,949px 579px,951px 569px,948px 564px,956px 543px,958px 520px,959px 505px,961px 478px,960px 452px,957px 436px,955px 429px,956px 419px,956px 406px,953px 393px,956px 378px,950px 358px,929px 339px,889px 313px,868px 301px,858px 298px,846px 298px,848px 281px,849px 272px,845px 252px,836px 235px,823px 221px,811px 211px,795px 204px,777px 202px,765px 204px,751px 206px);
+  height:100vh;
+  position:absolute;
+  width:100%;
+}
+
+.members-pete {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */    
+   -webkit-filter: grayscale(100%);
+   -moz-filter: grayscale(100%);
+   -ms-filter: grayscale(100%);
+   filter: grayscale(100%);
+   filter: gray; /* IE 6-9 */
+  -webkit-clip-path: polygon(1010px 143px,1001px 152px,987px 159px,974px 173px,969px 197px,969px 254px,972px 257px,974px 272px,979px 281px,987px 285px,989px 296px,970px 300px,942px 313px,925px 321px,920px 333px,934px 344px,945px 353px,951px 361px,954px 366px,952px 396px,954px 400px,955px 411px,953px 420px,954px 432px,957px 441px,959px 453px,960px 496px,960px 510px,956px 517px,956px 521px,961px 526px,957px 531px,954px 536px,955px 541px,959px 545px,956px 551px,954px 551px,947px 557px,947px 578px,950px 584px,952px 589px,958px 594px,968px 592px,974px 594px,993px 596px,1020px 596px,1026px 600px,1048px 601px,1105px 608px,1151px 615px,1170px 617px,1230px 631px,1289px 647px,1314px 661px,1328px 642px,1320px 611px,1305px 604px,1291px 589px,1287px 573px,1278px 555px,1259px 528px,1237px 507px,1213px 493px,1222px 455px,1232px 432px,1231px 403px,1234px 369px,1231px 354px,1226px 341px,1204px 326px,1168px 308px,1154px 302px,1132px 299px,1111px 293px,1112px 286px,1112px 270px,1115px 250px,1111px 230px,1105px 207px,1103px 188px,1089px 169px,1060px 150px,1050px 141px,1040px 142px,1032px 141px,1023px 142px);
+  height:100vh;
+  position:absolute;
+  width:100%;
+}
+
+.members-john:hover, .members-ringo:hover, .members-paul:hover, .members-george:hover, .members-color, .members-roger:hover, .members-johne:hover, .members-keith:hover, .members-pete:hover {
+  -webkit-filter: none;
+   -moz-filter: none;
+   -ms-filter: none;
+   filter: none;
+   cursor:pointer;
+   -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.member-popup {
+  position: absolute;
+  top:0;
+  right:-36em;
+  z-index: 1001;
+  width: 33em;
+  height: 100%;
+  background: #373a47;
+  padding: 7.5em 2.5em 0;
+  font-size: 1.15em;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  color:white;
+  background:rgba(198,105,20,0.8);
+}
+.member-popup p {
+  margin-top:0.3em;
+}
+.member-popup img {
+  opacity:0.8;
+  margin:10px 0;
+}
+.roger-popup, .johne-popup, .keith-popup, .pete-popup {
+  background:rgba(133, 160, 34, 0.8);
+}
+.member-popup h3 {
+  color:white;
+  margin-bottom:0;
+  line-height:1.0em;
+}
+.member-popup h4 {
+  color:white;
+}
+.member-popup.open {
+  display:block;
+  right:0;
+}
+
+.reveal-modal.full, dialog.full {
+width: 100%;
+max-width: 100%;
+height: 100vh;
+left: 0;
+right: 0;
+bottom: 0;
+top: 0;
+margin: 0 auto;
+margin: 0;
+z-index: 5005;
+}
+/*Firefox*/
+/*
+clip-path: url("#clipPolygon");
+}
+*/
+/*
+.beatles-johnny {
+  height:auto;
+  left:100px;
+  -webkit-mask-image: url('../img/john-mask2.png');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size:auto;
+  -webkit-mask-position: 140px 50px;
+  position:absolute;
+  z-index:4;
+  display:block;
+}*/
+
+/****** The Rolling Stones ******/
+
+#rollingStones{
+  background:url("../img/rollingstones.jpg") no-repeat center center fixed;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -ms-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: 100% auto;
+  padding: 6% 0 0 0;
+}
+
+/****** Stones vs. Beatles / The Mod Takeover / Who Was Influenced ******/
+
+#beatlesVsstones {
+  background:rgba(74, 166, 171, 1); 
+  overflow:hidden;
+  width:100%;
+}
+
+#takeoverMod {
+  overflow:hidden;
+  width:100%;
+  background:rgba(74, 166, 171, 1); 
+}
+
+#whoInfluenced {
+  overflow:hidden;
+  width:100%;
+  background:rgba(133, 160, 34, 1);
+}
+
+
+#beatlesVsstones .columns, #takeoverMod .columns, #whoInfluenced .columns {
+  height:100%;
+}
+
+#beatlesVsstones img, #takeoverMod img, #whoInfluenced img {
+  position:absolute;
+  cursor:pointer;
+}
+
+.panel-trigger {
+  bottom:-10em;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.kinksMod, .revereInfluence {
+  bottom:-35em;
+}
+
+.panel-trigger:hover, .turn-up {
+  bottom:20em;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.beatlesVs, .stonesVs {
+  bottom:-20em;
+}
+
+.beatlesVs:hover, .stonesVs:hover, .beat-turn-up {
+  bottom:0;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.kinksMod:hover, .revereInfluence:hover, .alt-turn-up {
+  bottom:-10em;
+}
+
+/*
+
+.beatlesVs, .stonesVs, .kinksMod {
+  top:450px;
+  bottom:auto;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.scooterMod, .twiggyMod {
+  top:300px;
+  bottom:auto;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+
+
+.beatlesVs:hover, .stonesVs:hover, .kinksMod:hover, .scooterMod:hover, .twiggyMod:hover, .turn-up {
+  top:auto;
+  bottom:0;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.scooterMod:hover, .twiggyMod:hover, .alt-turn-up {
+  bottom:250px;
+  top:auto;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+*/
+/*
+ {
+  top:auto;
+  bottom:300px;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+ {
+  top:auto;
+  bottom:-100px;
+  transition:all 1s ease-in-out;
+}*/
+
+  video#bgvid {
+position: fixed; right: 0; bottom: 0;
+min-width: 100%; min-height: 100%;
+width: auto; height: auto; z-index: -100;
+background: url(polina.jpg) no-repeat;
+background-size: cover;
+}
+
+@media screen and (max-device-width: 800px) {
+html { background: url(polina.jpg) #000 no-repeat center center fixed; }
+#bgvid { display: none; }
+}
+
+.beatlesVs-target, .byrdsInfluence-target, .twiggyMod-target {
+  width: 50em;
+  z-index: 500;
+  position: absolute;
+  top: 300px;
+  left: 700px;
+  transition: all 0.5s ease;
+}
+
+.byrdsInfluence-target {
+  left:730px;
+}
+
+.twiggyMod-target {
+  left: 750px;
+}
+
+.avengersMod-target, .monkeesInfluence-target {
+  width: 50em;
+  z-index: 500;
+  position: absolute;
+  top: 300px;
+  left: 300px;
+  transition: all 0.5s ease;
+}
+
+.monkeesInfluence-target {
+  left:370px;
+}
+
+.beatlesVs-target:before,
+.avengersMod-target:before, 
+.twiggyMod-target:before,
+.monkeesInfluence-target:before, 
+.byrdsInfluence-target:before  {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.beatlesVs-target:after, .avengersMod-target:after, .twiggyMod-target:after, .monkeesInfluence-target:after, .byrdsInfluence-target:after  {
+  border-color: rgba(136, 183, 213, 0);
+  border-right-color: rgba(255,255,255,0.8);
+  border-width: 35px;
+  margin-top: -35px;
+}
+.beatlesVs-target:before, .avengersMod-target:before, .twiggyMod-target:before, .monkeesInfluence-target:before, .byrdsInfluence-target:before  {
+  border-color: rgba(194, 225, 245, 0);
+  border-right-color: rgba(255,255,255,0.8);
+  border-width: 35px;
+  margin-top: -35px;
+}
+
+.beatlesVs-target.show, .stonesVs-target.show, .avengersMod-target.show, .twiggyMod-target.show, .kinksMod-target.show, .byrdsInfluence-target.show, .monkeesInfluence-target.show, .revereInfluence-target.show {
+  display:block;
+}
+
+.stonesVs-target, .kinksMod-target, .revereInfluence-target {
+  width: 50em;
+  z-index: 500;
+  position: absolute;
+  top: 300px;
+  right: 450px;
+  transition: all 0.5s ease;
+}
+
+.revereInfluence-target {
+  right:600px;
+}
+
+.stonesVs-target:before, .kinksMod-target:after, .kinksMod-target:before, .revereInfluence-target:before, .revereInfluence-target:after {
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.stonesVs-target:before, .kinksMod-target:before, .revereInfluence-target:before {
+  border-color: rgba(194, 225, 245, 0);
+  border-left-color: rgba(255,255,255,0.8);
+  border-width: 35px;
+  margin-top: -35px;
+}
+
+/****** Second Wave ******/
+
+#secondWave{
+  background:url("../img/secondwavebg.jpg") no-repeat center center fixed;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -ms-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: 100% auto;
+  padding: 10% 0 0 0;
+}
+
+
+/****** The Kinks ******/
+
+#theKinks{
+  background:url("../img/thekinks.jpg") no-repeat center center fixed;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -ms-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: 100% auto;
+  padding: 10% 0 0 0;
+}
+
+
+/****** Influence on American Culture ******/
+
+#influenceOn{
+  background:url("../img/americanfans.jpg") no-repeat center center fixed;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -ms-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: 100% auto;
+  padding: 10% 0 0 0;
+}
+
+
+/****** Second and Third Invasions ******/
+
+#nextInvasion{
+  background:url("../img/coldplay.jpg") no-repeat center center fixed;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -ms-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: 100% auto;
+  padding: 10% 0 0 0;
+}
+
+
+
+/* ==========================================================================
+   Defined Styles
+   ========================================================================== */
+
+
+.blue {
+  background:rgba(74, 166, 171, 0.9);
+}
+
+.green {
+  background:rgba(133, 160, 34, 0.8);
+}
+
+.orange {
+  background:rgba(198,105,20,0.8);
+}
+
+/*
+   #section-intro {
+      height:1000px;
+      background:url("../img/beatlesfans.jpg");
+      width: 100%;
+      display: block;
+   }
+
+   #section-beatlesarrive {
+      height:1000px;
+      background:url("../img/beatles1963.jpg");
+      width: 100%;
+      display: block;
+   }*/
+
+
+/* Menu Button */
+.menu-button {
+  position: fixed;
+  z-index: 1000;
+  margin: 1em;
+  padding: 0;
+  width: 2.5em;
+  height: 2.25em;
+  border: none;
+  text-indent: 2.5em;
+  font-size: 1.5em;
+  color: transparent;
+  background: transparent;
+}
+
+.menu-button::before {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  bottom: 0.5em;
+  left: 0.5em;
+  background: linear-gradient(#373a47 20%, transparent 20%, transparent 40%, #373a47 40%, #373a47 60%, transparent 60%, transparent 80%, #373a47 80%);
+  content: '';
+}
+
+.menu-button:hover {
+  opacity: 0.6;
+}
+
+/* Close Button */
+.close-button {
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  right: 1em;
+  top: 10em;
+  overflow: hidden;
+  text-indent: 1em;
+  font-size: 0.75em;
+  border: none;
+  background: transparent;
+  color: transparent;
+}
+
+.close-button::before,
+.close-button::after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background: white;
+}
+
+.close-button:hover, .close-button:focus, .close-button:active {
+  outline:none;
+  background:transparent;
+}
+
+.close-button::before {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.close-button::after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+

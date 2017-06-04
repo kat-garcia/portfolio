@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://use.typekit.net/yfe0wpm.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <meta charset="utf-8">
+    <title>Kat Garcia</title>
+    <meta name="description" content="Kat Garcia, digital product designer.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <script src="https://use.fontawesome.com/703eeb9cb4.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-100198505-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+  </head>
+  <body>
+    <nav>
+        <ul>
+          <li><a href="index.html">Work</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a aria-current="page" href="writing-events.html">Writing & Events</a></li>
+        </ul>
+    </nav>
+    <section id="intro">
+        <div class="writing">
+            <h2>Writing</h2>
+            <ul>
+                <li><a href="https://sprintstories.com/how-design-sprints-can-solve-complex-business-challenges-e19abf4ab547" target="_blank">How Design Sprints Can Solve Complex Business Challenges</a></li>
+                <li><a href="https://www.freshtilledsoil.com/from-graphic-design-to-the-digital-age/" target="_blank">From Graphic Design to the Digital Age </a></li>
+                <li><a href="https://www.freshtilledsoil.com/7-keys-to-experience-mapping-success/" target="_blank">7 Keys to Experience Mapping Success</a></li>
+            </ul>
+        </div>
+        <div class="events">
+            <h2>Events</h2>
+            <ul>
+                <li><a href="http://www.northeastern.edu/scout/tackling-ux-with-fresh-tilled-soil/" target="_blank">Scout: Tackling UX With Fresh Tilled Soil</a></li>
+                <li><a href="http://www.northeastern.edu/scout/event/understanding-ux/" target="_blank">Scout: Understanding UX</a></li>
+                <li><a href="http://news.northeastern.edu/2014/04/moment-for-reflection/" target="_blank">Our Marathon Exhibit Opening</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <hr>
+        <p>
+            <i class="fa fa-envelope-o" aria-hidden="true" style="margin-right:7px"></i>
+                katerigarcia@gmail.com
+            <span style="float:right">
+                <a href="https://twitter.com/katerinaigarcia" target="_blank">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/katerinagarcia/" target="_blank">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="https://dribbble.com/katgarcia" target="_blank">
+                    <i class="fa fa-dribbble" aria-hidden="true"></i>
+                </a>
+            </span>
+        </p>
+    </footer>
+
+
+        
+        <!-- page content -->
+
+    <script src="js/clipboard.min.js"></script>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/tooltip.js"></script>
+    <script>
+/*
+        // Tooltip
+
+        $('#email').tooltip({
+          trigger: 'click',
+          placement: 'bottom'
+        });
+
+        function setTooltip(email, message) {
+          $(email).tooltip('hide')
+            .attr('data-original-title', message)
+            .tooltip('show');
+        }
+
+        function hideTooltip(email) {
+          setTimeout(function() {
+            $(email).tooltip('hide');
+          }, 1000);
+        }
+*/
+        // Clipboard
+
+        var clipboard = new Clipboard('.email');
+/*
+        clipboard.on('success', function(e) {
+          setTooltip(e.trigger, 'Copied!');
+          hideTooltip(e.trigger);
+        });
+
+        clipboard.on('error', function(e) {
+          setTooltip(e.trigger, 'Failed!');
+          hideTooltip(e.trigger);
+        });
+    */
+
+        clipboard.on('success', function(e) {
+            e.clearSelection();
+
+            console.info('Action:', e.action);
+            console.info('Text:', e.text);
+            console.info('Trigger:', e.trigger);
+
+            showTooltip(e.trigger, 'Copied!');
+        });
+
+        clipboard.on('error', function(e) {
+            console.error('Action:', e.action);
+            console.error('Trigger:', e.trigger);
+
+            showTooltip(e.trigger, fallbackMessage(e.action));
+        });
+
+    </script>
+    
+    <script>
+        $(document).ready(function() {
+   
+        //Preload
+        $('<img/>').hide().attr('src', 'img/fresh-website.png').load(function(){
+            $('.project-1').append($(this));
+        });
+        
+        $('.project-1').hover(function() {
+            $('.project-1').css('background', 'linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url("img/fresh-website.png")');
+            $('.project-1').css('background-size','cover');
+        }, function() {
+            $('.project-1').css('background', '');
+        });
+
+
+        $('<img/>').hide().attr('src', 'img/beatles-profiles-bw.png').load(function(){
+            $('.project-7').append($(this));
+        });
+        
+        $('.project-7').hover(function() {
+            $('.project-7').css('background', 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url("img/beatles-profiles-bw.jpg") no-repeat');
+        }, function() {
+            $('.project-7').css('background', '');
+        });
+
+
+        $('<img/>').hide().attr('src', 'img/our-marathon.jpg').load(function(){
+            $('.project-8').append($(this));
+        });
+        
+        $('.project-8').hover(function() {
+            $('.project-8').css('background', 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url("img/ourmarathon.jpg") center no-repeat');
+            $('.project-8').style.WebkitTransition = 'opacity 1s';
+        }, function() {
+            $('.project-8').css('background', '');
+        });
+
+    });
+    </script>
+
+
+  </body>
+</html>

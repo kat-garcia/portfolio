@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://use.typekit.net/yfe0wpm.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <meta charset="utf-8">
+    <title>Kat Garcia</title>
+    <link rel="stylesheet" href="css/simple-grid.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/modernizr.js"></script>
+  </head>
+  <body data-hijacking="off" data-animation="scaleDown">
+  <!--
+  <div class="about">
+        <h1>KAT GARCIA</h1>
+        <h3>I'm an experience designer living in Cambridge, MA. I combine a passion for design thinking strategies with a respect for detail-driven design to create human-centered, intentional, beautiful experiences.</h3>
+      </div>
+    <div class="work">
+    <h2>Work</h2>
+        <ul>
+        <li>Fresh Tilled Soil Website and Brand Guidelines</li>
+        <li>Promoboxx Design Sprint</li>
+        <li>Roche Design Sprint</li>
+        <li>Frip</li>
+        <li>British Invasion</li>
+        <li>Our Marathon</li>
+        </ul>
+        <h2>Writing</h2>
+        <ul>
+        <li>7 Keys to Experience Mapping Success</li>
+        <li>From Graphic Design to the Digital Age</li>
+        </ul>
+        </div>-->
+    <nav>
+        <ul>
+          <li><a href="#home">Kat Garcia</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="cd-section header-home">
+        <div>
+        <h1>KAT GARCIA</h1>
+            <h3>I'm a product designer living in Cambridge, MA. I combine a passion for design thinking strategies with a respect for data/research to create human-centered, intentional, beautiful experiences.</h3>
+        </div>
+    </section>
+    <div id="projects">
+        
+        
+        <section class="project cd-section">
+            <div>
+                <hr>
+                <a class="txt-h2">Fresh Tilled Soil Website</a>
+                <h3>2017</h3>
+                <p>In the fall of 2016, the team at Fresh Tilled Soil embarked on a long overdue mission: redesigning the website. Through weeks of iteration, critique, and testing, we learned the true value of making room for play in work.</p>
+                <h6>UX Design, Visual Design, Brand Development</h6>
+            </div>
+            <div>
+                <img class="project-thumbnail" src="img/fts-thumbnail.png">
+            </div>
+        </section>
+
+        <section class="project cd-section">
+            <div>
+                <hr>
+                <a class="txt-h2">Fresh Tilled Soil Brand Guidelines</a>
+                <h3>2017</h3>
+                <p>After working with a team to redevelop the brand, I decided the only way to really make it count was an accessible brand guidelines. </p>
+                <h6>Visual Design, Brand Development, Design System, Front-end Development</h6>
+            </div>
+            <div>
+                <img class="project-thumbnail" src="img/ui-kit.png">
+            </div>
+        </section>
+
+        <section class="project cd-section">
+            <div>
+                <hr>
+                <a class="txt-h2">Frip</a>
+                <h3>2015</h3>
+                <p>Frip is a mobile app that helps you build flexible itineraries for friends looking to explore a new city for a few days.</p>
+                <h6>UX Design, Visual Design</h6>
+            </div>
+            <div>
+                <img class="project-thumbnail" src="img/frip.png">
+            </div>
+        </section>
+
+        <section class="project cd-section">
+            <div>
+                <hr>
+                <a href="work/british-invasion.html" class="txt-h2">British Invasion Timeline</a>
+                <h3>2014</h3>
+                <p>In the fall of 2014, I created a website telling the story of the 1960s British Invasion in American pop culture, designed to be an interactive (and musical) narrative.</p>
+                <h6>UX Design, Visual Design, Content Strategy</h6>
+            </div>
+            <div>
+                <img class="project-thumbnail" src="img/british.png">
+            </div>
+        </section>
+
+        <section class="project cd-section">
+            <div>
+                <hr>
+                <a href="work/our-marathon.html" class="txt-h2">Our Marathon Exhibit</a>
+                <h3>2014</h3>
+                <p>Our Marathon is a community digital archive of stories, photos and perspectives from the 2013 Boston Marathon bombing. The Our Marathon team asked Scout for a poignant yet uplifting exhibit of the Boston community's experiences during and after the tragedy. </p>
+                <h6>Visual Design, Print</h6>
+            </div>
+            <div>
+                <img class="project-thumbnail" src="img/ourmarathon4.jpg">
+            </div>
+        </section>
+
+
+    </div>
+
+    <section id="about">
+        <div class="bio">
+            <p>
+                I'm really into oejroejroejroejr
+            </p>
+        </div>
+        <div class="writing">
+            <h2>Writing</h2>
+            <hr>
+            <ul>
+                <li><a href="https://www.freshtilledsoil.com/7-keys-to-experience-mapping-success/" target="_blank">7 Keys to Experience Mapping Success</a></li>
+                <li><a href="https://www.freshtilledsoil.com/from-graphic-design-to-the-digital-age/" target="_blank">From Graphic Design to the Digital Age</a></li>
+                <li><a href="#" target="_blank">How Design Sprints Can Solve Complex Business Challenges</a></li>
+            </ul>
+        </div>
+    </section>
+
+        
+    </div>
+        <!-- page content -->
+
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/velocity.min.js"></script>
+<script src="js/velocity.ui.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    //actualBlock is the section we are animation
+        var offset = $(window).scrollTop() - actualBlock.offset().top,
+            windowHeight = $(window).height();
+         
+        if( offset >= -windowHeight && offset <= 0 ) {
+            // section entering the viewport
+            translateY = (-offset)*100/windowHeight;
+            scale = 1;
+            opacity = 1;
+        } else if( offset > 0 && offset <= windowHeight ) {
+            //section leaving the viewport 
+            scale = (1 - ( offset * 0.3/windowHeight));
+            opacity = ( 1 - ( offset/windowHeight) );
+            translateY = 0;
+            boxShadowBlur = 40*(offset/windowHeight);
+        }
+</script>
+  </body>
+</html>

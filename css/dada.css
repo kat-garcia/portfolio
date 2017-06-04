@@ -1,0 +1,56 @@
+/*@import url('https://fonts.googleapis.com/css?family=Merriweather:300,300i,700,700i|Muli:800,800i');*/
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,300i,700,700i|Playfair+Display+SC:700,700i');
+
+#intro-home:before {
+  content:"";
+  display:block;
+  width:200px;
+  border-radius:200px;
+  height:200px;
+  background:#D55523;
+  position:absolute;
+}
+
+#intro-home h1 {
+  text-transform:uppercase;
+  font-size:60px;
+}
+
+#name {
+  position:absolute;
+  left:800px;
+  margin-top:20px;
+}
+
+#name span {
+  font-size:200px;
+  color:#1936d4;
+  line-height:180px;
+  float:left;
+  position:absolute;
+  margin-top:100px;
+}
+
+#name span:first-child {
+  right:700px;
+}
+
+#name span:last-child {
+  right:-140px;
+}
+
+#name span:first-child:after {
+  content:"";
+  display:block;
+  top:-280px;
+  height:3000px;
+  width:16px;
+  left:400px;
+  position:absolute;
+  background:#D55523;
+}
+
+#projects {
+  top:450px;
+  position:absolute;
+}
