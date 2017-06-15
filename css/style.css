@@ -45,7 +45,7 @@ nav {
   font-weight:300;
   color: #020A36;
   line-height: 1.8;
-  
+
 }
 
 @font-face {
@@ -339,7 +339,7 @@ background-color:#4CAF50;
   padding:50px 100px;
 }
 
-.project h3 { 
+.project h3 {
   display: inline;
 }
 
@@ -348,7 +348,7 @@ background-color:#4CAF50;
   display: inline;
 }
 
-.project-1, .project-3, .project-6, .project-8 {
+.project-1, .project-3, .project-5, .project-7 {
   background:#f7d8cb;
   background-size: cover;
 }
@@ -388,6 +388,12 @@ background-color:#4CAF50;
 
 .project-3:hover {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url("../img/curata-blog.png");
+  background-size:cover;
+
+}
+
+.project-4:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url("../img/offerlogic.png");
   background-size:cover;
 
 }
@@ -523,7 +529,7 @@ a:hover .project i {
 
 
 .project-head .row div li {
-  padding-left: 1em; 
+  padding-left: 1em;
   text-indent: -.7em;
 }
 
@@ -677,5 +683,3 @@ a:hover .project i {
   p {
     font-size: 16px;
   }
-
-
